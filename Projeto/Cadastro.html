@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro -Stockar</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="validate.js" defer></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<style>
+  *{
+  padding: 0px;
+  margin: 0px;
+}
+
+.body {
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+background-color: #ffffff;
+background-size: 0;
+margin: 0;
+display: flex;
+justify-content: right;
+align-items: flex-start;
+margin: 100px;
+flex-direction: row;
+margin: 200px;
+}
+
+.cadastro-container {
+background-color: rgb(190, 40, 40);
+border-radius: 5px;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+background-color: #2d81b3;
+width: 500px;
+height: 625px;
+text-align: center;
+border: 6px;
+margin: left;
+position: relative;
+
+
+}
+
+.cadastro-container h2 {
+margin-bottom: center;
+}
+
+.botão-cadastro {
+background-color: #1c9bd6;
+color: white;
+border: 1px solid rgb(0, 0, 0);
+border-radius: 15px;
+padding: 10px;
+cursor: pointer;
+width: 100%;
+transition: background-color 0.3s ease;
+}
+
+.botão-cadastro:hover {
+background-color: #0f36e2;
+}
+
+.titulo{
+font-size: 50px;
+font-weight: 500;
+font-style: italic;
+padding: 40px;
+font-family:'Lilita One', cursive;
+align-items: flex-start;
+flex-direction: row;
+display: flex;
+top: 5%;
+left: 26%;
+z-index: 1;
+position: absolute;
+
+}
+
+.crie{
+padding: 10px;
+font-family: Arial, Helvetica, sans-serif;
+}
+img{
+  width: 400px;
+  height: 400px;
+  align-items: baseline;
+  
+}
+
+</style>
+
+    <body class="body">
+      <img class="img" src="imagem na tela de cadastro.png" alt="imagem de tres caixas">
+        
+      <div class="titulo">Cadastro Usuario</div>
+
+          <form class="p-5" action="conexaocadastro.php" method="post" id="formcad">
+            
+            <div class="mb-3">
+              <label class="form-label">Nome Completo</label>
+              <input id="nome" type="text" class="form-control" placeholder="Nome Completo" name="Nome_U">
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">E-mail</label>
+              <input id="email" type="email" class="form-control" placeholder="E-mail" name="Email_U">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Telefone</label>
+                <input id="telefone" type="text" class="form-control" placeholder="Telefone" name="Telefone_U">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">CNPJ</label>
+                <input id="cnpj" type="text" class="form-control" placeholder="CNPJ" name="CPF_CNPJ_U">
+            </div>
+
+            <div class="mb-3">
+              <label for="Senha_U" class="form-label">Senha</label>
+              <input id="Senha_U" type="password" name="Senha_U" placeholder="Senha" class="form-control" patern="(?=(.*[0-9]))((?=.*[A-Za z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$" required/>
+            </div>
+
+            <div class="mb-3">
+              <label for="C_Senha" class="form-label">Confirmar Senha</label>
+              <input id="C_Senha" type="password" name="C_Senha" placeholder="Confirme sua Senha" class="form-control" required/>
+            </div>        
+
+            <div class="mb-3">
+              <label class="form-label">Nacionalidade</label>
+              <input id="nacionalidade" type="text" class="form-control" placeholder="Nacionalidade" name="Nacionalidade">
+            </div>
+
+            <button type = "submit" class = 'botão-cadastro' href = 'Login.html'>Criar Conta</button>
+
+        </form>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    
+        <script>
+            $('#telefone').mask('(00) 0 0000-0000');
+            $('#cnpj').mask('00.000.000/0000-00', { reverse: true });
+        </script>
+
+        </div>
+    </body>
+
+</html>
